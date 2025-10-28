@@ -1,37 +1,49 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Header() {
-    return (
-        <div className="fixed top-0 z-10 w-full py-8">
-            <div className="max-w-[1440px] mx-auto flex flex-1 justify-between items-center h-min">
-                <Image
-                    src="/logo.avif"
-                    width={69}
-                    height={24}
-                    alt="Picture" />
+  const router = useRouter();
+  const pathname = usePathname();
 
+  const handleScrollToServices = (e: React.MouseEvent) => {
+    e.preventDefault();
 
-                <ul className="flex gap-[23px] text-white text-[18px]">
-                    <li>
-                        <Link href='/works'>Works</Link>
-                    </li>
-                    <li>
-                        <Link href='/works'>Studio</Link>
-                    </li>
-                    <li>
-                        <Link href='/works'>Services</Link>
-                    </li>
-                    <li>
-                        <Link href='/works'>Gallery</Link>
-                    </li>
-                </ul>
+    if (pathname === "/") {
+      // Уже на главной — плавно скроллим
+      const el = document.getElementById("services");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Если на другой странице — переходим на главную с якорем
+      router.push("/#services");
+    }
+  };
 
-                <p className="text-[17px] text-white">
-                    <Link href="/works">Get in touch</Link>
-                </p>
-            </div>
+  return (
+    <header className="fixed top-0 z-10 w-full py-8">
+      <div className="max-w-[1440px] mx-auto flex justify-between items-center">
+        <p className="text-[36px] text-[#808080]">
+          <Link href="/">Avrix</Link>
+        </p>
 
-        </div>
-    );
+        <ul className="flex gap-[23px] text-[#808080] text-[18px]">
+          <li><Link href="/works">Works</Link></li>
+          <li><Link href="/works">Studio</Link></li>
+          <li>
+            <a href="#services" onClick={handleScrollToServices}>
+              Services
+            </a>
+          </li>
+          <li><Link href="/works">Gallery</Link></li>
+        </ul>
+
+        <p className="text-[17px] text-[#808080]">
+          <Link href="/works">Get in touch</Link>
+        </p>
+      </div>
+    </header>
+  );
 }

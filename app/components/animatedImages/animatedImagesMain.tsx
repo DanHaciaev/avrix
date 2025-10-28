@@ -49,9 +49,9 @@ export default function AnimatedImages() {
           <div
             key={i}
             ref={(el) => setRef(el, i)}
-            className={`relative w-full h-auto max-w-[${block.maxW}] transition-all duration-700 ease-out transform ${
-              visible[i] ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-            }`}
+            className={`relative w-full h-auto transition-all duration-700 ease-out transform ${visible[i] ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+              }`}
+            style={{ maxWidth: block.maxW }}
           >
             <div className="relative w-full h-[460px]">
               <Image src={block.src} alt={block.title} fill className="object-cover" />
@@ -71,11 +71,11 @@ export default function AnimatedImages() {
       <div className="flex items-center justify-center gap-5">
         {blocks.slice(2, 4).map((block, i) => (
           <div
-            key={i + 2}
-            ref={(el) => setRef(el, i + 2)}
-            className={`relative w-full h-auto max-w-[${block.maxW}] transition-all duration-700 ease-out transform ${
-              visible[i + 2] ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-            }`}
+            key={i}
+            ref={(el) => setRef(el, i)}
+            className={`relative w-full h-auto transition-all duration-700 ease-out transform ${visible[i] ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+              }`}
+            style={{ maxWidth: block.maxW }}
           >
             <div className="relative w-full h-[460px]">
               <Image src={block.src} alt={block.title} fill className="object-cover" />

@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 z-10 w-full py-8">
+    <header className="fixed top-0 z-10 w-full py-8 backdrop-blur">
       <div className="max-w-[1440px] mx-auto flex justify-between items-center">
         <p className="text-[36px] text-[#808080]">
           <Link href="/">Avrix</Link>

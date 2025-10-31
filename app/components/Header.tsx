@@ -31,7 +31,7 @@ export default function Header() {
 
         <ul className="flex gap-[23px] text-[#808080] text-[18px]">
           <li><Link href="/works">Works</Link></li>
-          <li><Link href="/works">Studio</Link></li>
+          <li><Link href="/studio">Studio</Link></li>
           <li>
             <a href="#services" onClick={handleScrollToServices}>
               Services
@@ -40,9 +40,15 @@ export default function Header() {
           <li><Link href="/works">Gallery</Link></li>
         </ul>
 
-        <p className="text-[17px] text-[#808080]">
-          <Link href="/works">Get in touch</Link>
+        <p className="text-[18px] text-[#808080]">
+          <Link
+            href="/contact"
+            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-px after:bg-[#808080] after:scale-x-0 after:origin-left after:transition-transform after:duration-500 hover:after:scale-x-100"
+          >
+            Get in touch
+          </Link>
         </p>
+
       </div>
     </header>
   );

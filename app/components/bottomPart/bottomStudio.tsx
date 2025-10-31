@@ -1,12 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export default function Bottom() {
+export default function BottomStudio() {
     return (
         <div>
             <section className="relative h-[400px] flex items-center">
                 <Image
-                    src="/bottom.avif"
+                    src="/bottom_studio.avif"
                     alt="Background"
                     fill
                     className="object-cover"

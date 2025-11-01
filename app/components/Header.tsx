@@ -26,23 +26,24 @@ export default function Header() {
     <header className="fixed top-0 z-10 w-full py-8 backdrop-blur">
       <div className="max-w-[1440px] mx-auto flex justify-between items-center">
         <p className="text-[36px] text-[#808080]">
-          <Link href="/">Avrix</Link>
+          <Link href="/" scroll={false}>Avrix</Link>
         </p>
 
         <ul className="flex gap-[23px] text-[#808080] text-[18px]">
-          <li><Link href="/works">Works</Link></li>
-          <li><Link href="/studio">Studio</Link></li>
+          <li><Link href="/works" scroll={false}>Works</Link></li>
+          <li><Link href="/studio" scroll={false}>Studio</Link></li>
           <li>
             <a href="#services" onClick={handleScrollToServices}>
               Services
             </a>
           </li>
-          <li><Link href="/works">Gallery</Link></li>
+          <li><Link href="/works" scroll={false}>Gallery</Link></li>
         </ul>
 
         <p className="text-[18px] text-[#808080]">
           <Link
             href="/contact"
+            scroll={false}
             className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-px after:bg-[#808080] after:scale-x-0 after:origin-left after:transition-transform after:duration-500 hover:after:scale-x-100"
           >
             Get in touch

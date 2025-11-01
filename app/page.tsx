@@ -6,6 +6,7 @@ import AnimatedImagesSofa from "./components/animatedImages/animatedImagesSofa";
 import AnimatedText from "./components/animatedText/animatedTextMain";
 import AnimatedTextSpace from "./components/animatedText/animatedTextSpace";
 import Bottom from "./components/bottomPart/bottom";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -28,9 +29,9 @@ export default function Home() {
           <AnimatedText text="Avrix is a design-forward development studio focused on creating built environments architectural experiences that stand the test of time." highlightWords={6} />
 
 
-          <button className="border uppercase w-fit px-5 py-2.5 text-[20px]">
+          <Link href="/studio" className="border uppercase w-fit px-5 py-2.5 text-[20px] hover:opacity-[.4]">
             About the studio
-          </button>
+          </Link>
         </div>
       </section>
 

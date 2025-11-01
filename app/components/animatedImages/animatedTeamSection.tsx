@@ -49,7 +49,7 @@ export default function TeamSection() {
                         key={i}
                         className={`max-w-[350px] w-full flex flex-col gap-2.5 transition-all duration-700 transform
             ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-                        style={{ transitionDelay: `${(i + 1) * 0.2}s` }} // ✅ задержка 0.5s между блоками
+                        style={{ transitionDelay: `${(i + 1) * 0.2}s` }}
                     >
                         <div className="relative w-[350px] h-[350px]">
                             <Image

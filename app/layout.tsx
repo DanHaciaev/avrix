@@ -3,6 +3,7 @@ import { Host_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/bottomPart/footer";
+import ScrollToTop from "./components/scrollToTop";
 
 
 const hostGrotesk = Host_Grotesk({
@@ -25,9 +26,9 @@ export default function RootLayout({
       <body
         className={`${hostGrotesk.variable} antialiased`}
       >
+        <ScrollToTop />
         <Header />
         <main>{children}</main>
-
         <Footer />
       </body>
     </html>

@@ -3,8 +3,8 @@ import Link from "next/link"
 
 export default function Bottom() {
     return (
-        <div>
-            <section className="relative h-[400px] flex items-center">
+        <div className="">
+            <section className="relative h-[400px] px-[30px] flex items-center">
                 <Image
                     src="/bottom.avif"
                     alt="Background"

@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <div>
-            <footer className="py-[90px] bg-black">
+            <footer className="py-[90px] px-[30px] bg-black">
                 <div className="max-w-[1440px] mx-auto h-[200px] flex items-center justify-between">
                     {/* Left part of footer */}
                     <div className="flex flex-col justify-between h-full">

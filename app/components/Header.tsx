@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 z-10 w-full py-8 backdrop-blur">
+    <header className="fixed top-0 z-10 w-full py-8 backdrop-blur px-[30px]">
       <div className="max-w-[1440px] mx-auto flex justify-between items-center">
         <p className="text-[36px] text-[#808080]">
           <Link href="/" scroll={false}>Avrix</Link>
@@ -37,7 +37,7 @@ export default function Header() {
               Services
             </a>
           </li>
-          <li><Link href="/works" scroll={false}>Gallery</Link></li>
+          <li><Link href="/gallery" scroll={false}>Gallery</Link></li>
         </ul>
 
         <p className="text-[18px] text-[#808080]">

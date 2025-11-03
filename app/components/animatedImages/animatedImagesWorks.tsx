@@ -49,7 +49,7 @@ export default function AnimatedImagesWorks() {
                     </div>
                 </div>
 
-                <div className="bg-[url(/house2.avif)] bg-cover bg-center bg-no-repeat flex-1 h-[700px] flex items-center relative">
+                <div className="bg-[url(/house2.avif)] bg-cover bg-center bg-no-repeat flex-1 h-[700px] flex items-center relative transition-transform duration-500 ease-out hover:scale-[0.98]">
                     <div className="absolute inset-0 bg-linear-to-t from-black to-black/5"></div>
                     <div className="absolute bottom-1 left-1/2 -translate-x-1/2 text-center flex flex-col gap-5">
                         <p className="text-white text-[36px]">Inner Garden</p>
@@ -64,7 +64,7 @@ export default function AnimatedImagesWorks() {
                 className={`transition-all duration-1000 ease-out ${visible2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                     }`}
             >
-                <div className="bg-[url(/house3.avif)] bg-cover bg-center bg-no-repeat h-[700px] flex items-center relative">
+                <div className="bg-[url(/house3.avif)] bg-cover bg-center bg-no-repeat h-[700px] flex items-center relative transition-transform duration-500 ease-out hover:scale-[0.98]">
                     <div className="absolute inset-0 bg-linear-to-t from-black to-black/5"></div>
                     <div className="absolute bottom-1 left-1/2 -translate-x-1/2 text-center flex flex-col gap-5">
                         <p className="text-white text-[36px]">Cala Sol</p>
@@ -79,7 +79,7 @@ export default function AnimatedImagesWorks() {
                 className={`flex gap-5 transition-all duration-1000 ease-out ${visible3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                     }`}
             >
-                <div className="bg-[url(/main.avif)] bg-cover bg-center bg-no-repeat flex-1 h-[700px] flex items-center relative hover:scale-[-1]">
+                <div className="bg-[url(/main.avif)] bg-cover bg-center bg-no-repeat flex-1 h-[700px] flex items-center relative transition-transform duration-500 ease-out hover:scale-[0.98]">
                     <div className="absolute inset-0 bg-linear-to-t from-black to-black/5"></div>
                     <div className="absolute bottom-1 left-1/2 -translate-x-1/2 text-center flex flex-col gap-5">
                         <p className="text-white text-[36px]">Circle 27</p>
@@ -87,7 +87,7 @@ export default function AnimatedImagesWorks() {
                     </div>
                 </div>
 
-                <div className="bg-[url(/house4.avif)] bg-cover bg-center bg-no-repeat flex-1 h-[700px] flex items-center relative">
+                <div className="bg-[url(/house4.avif)] bg-cover bg-center bg-no-repeat flex-1 h-[700px] flex items-center relative transition-transform duration-500 ease-out hover:scale-[0.98]">
                     <div className="absolute inset-0 bg-linear-to-t from-black to-black/5"></div>
                     <div className="absolute bottom-1 left-1/2 -translate-x-1/2 text-center flex flex-col gap-5">
                         <p className="text-white text-[36px]">Haus Schnee</p>

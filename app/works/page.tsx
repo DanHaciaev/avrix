@@ -1,4 +1,4 @@
-import AnimatedImagesWorks from "../components/animatedImages/animatedImagesWorks";
+import AnimatedImagesWorks from "./components/animatedImagesWorks";
 
 export default function Works() {
   return (

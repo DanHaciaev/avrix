@@ -1,25 +1,12 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 
 interface Slide {
     src: string;
 }
 
-export default function AnimatedSwiperWorks() {
-    const slides: Slide[] = [
-        {
-            src: "/item1.avif",
-        },
-        {
-            src: "/item2.avif",
-        },
-        {
-            src: "/item3.avif",
-        },
-        {
-            src: "/item4.avif",
-        },
-    ];
-
+export default function AnimatedSwiperWorks({ slides }: { slides: string[] }) {
     const [currentIndex, setCurrentIndex] = useState(1);
     const [visibleIndex, setVisibleIndex] = useState<number | null>(0);
     const [isDragging, setIsDragging] = useState(false);
@@ -138,7 +125,7 @@ export default function AnimatedSwiperWorks() {
                             <div key={i} className="min-w-full">
                                 <div className="relative w-full h-[600px]">
                                     <img
-                                        src={slide.src}
+                                        src={slide}
                                         className="w-full h-full object-cover"
                                         draggable="false"
                                     />

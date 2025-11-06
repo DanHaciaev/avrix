@@ -25,10 +25,10 @@ export default function TeamSection() {
     }, []);
 
     const team = [
-        { src: "/woman1.avif", name: "Nora Talin", role: "Architect & Founder" },
-        { src: "/man1.avif", name: "Henrik Schaal", role: "Architect & Partner" },
-        { src: "/woman2.avif", name: "Elena Vargas", role: "Creative Director" },
-        { src: "/man2.avif", name: "Lukas Mertens", role: "3D Visualizer" },
+        { src: "/nora.avif", name: "Nora Talin", role: "Architect & Founder" },
+        { src: "/henrik.avif", name: "Henrik Schaal", role: "Architect & Partner" },
+        { src: "/elena.avif", name: "Elena Vargas", role: "Creative Director" },
+        { src: "/lukas.avif", name: "Lukas Mertens", role: "3D Visualizer" },
     ];
 
     return (

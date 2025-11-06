@@ -15,19 +15,19 @@ export const worksData = [
         surface: "320 m²",
 
         slider: [
-            "/item1.avif",
-            "/item2.avif",
-            "/item3.avif",
-            "/item4.avif",
+            "/fjordline1.avif",
+            "/fjordline2.avif",
+            "/fjordline3.avif",
+            "/fjordline4.webp",
         ],
 
         gallery: [
-            "/house1.avif",
-            "/house2.avif",
-            "/house3.avif",
-            "/main.avif",
-            "/house4.avif",
-            "/house4.avif",
+            "/fjordline5.webp",
+            "/fjordline6.webp",
+            "/fjordline7.webp",
+            "/fjordline8.webp",
+            "/fjordline9.webp",
+            "/fjordline10.webp",
         ],
     },
 
@@ -47,19 +47,15 @@ export const worksData = [
         surface: "280 m²",
 
         slider: [
-            "/item2-1.avif",
-            "/item2-2.avif",
-            "/item2-3.avif",
+            "/inner1.avif",
+            "/inner2.avif",
+            "/inner3.avif",
         ],
 
         gallery: [
-            "/ig1.avif",
-            "/ig2.avif",
-            "/ig3.avif",
-            "/ig4.avif",
-            "/house4.avif",
-            "/house4.avif",
-
+            "/inner4.avif",
+            "/inner5.avif",
+            "/inner6.avif",
         ],
     },
 
@@ -79,19 +75,15 @@ export const worksData = [
         surface: "460 m²",
 
         slider: [
-            "/item2-1.avif",
-            "/item2-2.avif",
-            "/item2-3.avif",
+            "/cala1.avif",
+            "/cala2.avif",
+            "/cala3.avif",
         ],
 
         gallery: [
-            "/ig1.avif",
-            "/ig2.avif",
-            "/ig3.avif",
-            "/ig4.avif",
-            "/house4.avif",
-            "/house4.avif",
-
+            "/work3.avif",
+            "/cala4.avif",
+            "/cala5.avif",
         ],
     },
 
@@ -111,19 +103,17 @@ export const worksData = [
         surface: "510 m²",
 
         slider: [
-            "/item2-1.avif",
-            "/item2-2.avif",
-            "/item2-3.avif",
+            "/circle1.avif",
+            "/divan.avif",
+            "/circle3.avif",
         ],
 
         gallery: [
-            "/ig1.avif",
-            "/ig2.avif",
-            "/ig3.avif",
-            "/ig4.avif",
-            "/house4.avif",
-            "/house4.avif",
-
+            "/item3.avif",
+            "/main.avif",
+            "/circle2.avif",
+            "/circle4.avif",
+            "/circle5.avif",
         ],
     },
 
@@ -143,17 +133,14 @@ export const worksData = [
         surface: "390 m²",
 
         slider: [
-            "/item2-1.avif",
-            "/item2-2.avif",
-            "/item2-3.avif",
+            "/studio.avif",
+            "/haus1.avif",
+            "/haus2.avif",
         ],
 
         gallery: [
-            "/ig1.avif",
-            "/ig2.avif",
-            "/ig3.avif",
-            "/ig4.avif",
-            "/house4.avif",
+            "/haus3.avif",
+            "/touch_services.avif",
             "/house4.avif",
         ],
     },

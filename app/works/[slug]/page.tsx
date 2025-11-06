@@ -15,12 +15,13 @@ export default async function WorksDetail({ params }: WorksDetailProps) {
 
   return (
     <div>
-      <section 
+      <section
         className="bg-cover bg-center bg-no-repeat min-h-screen relative flex items-end px-[30px]"
         style={{ backgroundImage: `url(${project.mainImage})` }}
       >
-        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-black/0"></div>
-        <div className="max-w-[1440px] mx-auto w-full flex items-end justify-between gap-[70px] mb-[90px]">
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-black/0 z-0"></div>
+
+        <div className="max-w-[1440px] mx-auto w-full flex items-end justify-between gap-[70px] mb-[90px] z-10">
           <p className="flex-1 text-[51px] text-white">
             {project.title}
           </p>
@@ -31,6 +32,7 @@ export default async function WorksDetail({ params }: WorksDetailProps) {
         </div>
       </section>
 
+
       <section className="px-[30px] py-[90px]">
         <div className="max-w-[1440px] mx-auto flex justify-between gap-5">
           <div className="flex flex-col justify-between">
@@ -40,9 +42,15 @@ export default async function WorksDetail({ params }: WorksDetailProps) {
             </div>
 
             <div className="flex gap-[30px]">
-              <p className="text-lg"><strong>Location</strong> {project.location}</p>
-              <p className="text-lg"><strong>Surface</strong> {project.surface}</p>
-              <p className="text-lg"><strong>Year</strong> {project.year}</p>
+              <p className="text-lg">
+                <strong className="font-normal!">Location</strong> {project.location}
+              </p>
+              <p className="text-lg">
+                <strong className="font-normal!">Surface</strong> {project.surface}
+              </p>
+              <p className="text-lg">
+                <strong className="font-normal!">Year</strong> {project.year}
+              </p>
             </div>
           </div>
 

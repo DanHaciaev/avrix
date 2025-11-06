@@ -103,6 +103,9 @@ export default function AnimatedSwiperWorks({ slides }: { slides: string[] }) {
 
     return (
         <div className="relative max-w-[710px] w-full mx-auto">
+            <p className="absolute z-100 text-white right-2 top-3 text-[26px]">
+                Project Highlights
+            </p>
             <div
                 className="overflow-hidden cursor-grab active:cursor-grabbing"
                 onMouseDown={handleMouseDown}

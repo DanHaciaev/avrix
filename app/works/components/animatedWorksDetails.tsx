@@ -45,59 +45,63 @@ export default function AnimatedWorksDetails({ project }: { project: any }) {
     return (
         <section className="flex flex-col gap-5 max-w-[1440px] mx-auto relative">
 
-            {/* Первый блок с двумя фото */}
-            <div
-                ref={ref1}
-                className={`flex gap-5 transition-all duration-1000 ease-out ${visible1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-            >
+            {project.gallery[0] && project.gallery[1] && (
                 <div
-                    className="bg-cover bg-center h-[600px] flex-1"
-                    style={{ backgroundImage: `url(${project.gallery[0]})` }}
-                />
+                    ref={ref1}
+                    className={`flex gap-5 transition-all duration-1000 ease-out ${visible1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                >
+                    <div
+                        className="bg-cover bg-center h-[600px] max-w-[865px] w-full"
+                        style={{ backgroundImage: `url(${project.gallery[0]})` }}
+                    />
+                    <div
+                        className="bg-cover bg-center h-[600px] flex-1"
+                        style={{ backgroundImage: `url(${project.gallery[1]})` }}
+                    />
+                </div>
+            )}
 
-                <div
-                    className="bg-cover bg-center h-[600px] flex-1"
-                    style={{ backgroundImage: `url(${project.gallery[1]})` }}
-                />
-            </div>
 
-            {/* Второй блок - одно фото */}
-            <div
-                ref={ref2}
-                className={`transition-all duration-1000 ease-out ${visible2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-            >
+            {project.gallery[2] && (
                 <div
-                    className="bg-cover bg-center h-[700px]"
-                    style={{ backgroundImage: `url(${project.gallery[2]})` }}
-                />
-            </div>
+                    ref={ref2}
+                    className={`transition-all duration-1000 ease-out ${visible2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                >
+                    <div
+                        className="bg-cover bg-center h-[600px]"
+                        style={{ backgroundImage: `url(${project.gallery[2]})` }}
+                    />
+                </div>
+            )}
 
-            {/* Третий блок с двумя фото */}
-            <div
-                ref={ref3}
-                className={`flex gap-5 transition-all duration-1000 ease-out ${visible3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-            >
+            {project.gallery[3] && project.gallery[4] && (
                 <div
-                    className="bg-cover bg-center h-[600px] flex-1"
-                    style={{ backgroundImage: `url(${project.gallery[3]})` }}
-                />
+                    ref={ref3}
+                    className={`flex gap-5 transition-all duration-1000 ease-out ${visible3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                >
+                    <div
+                        className="bg-cover bg-center h-[600px] max-w-[865px] w-full"
+                        style={{ backgroundImage: `url(${project.gallery[3]})` }}
+                    />
+                    <div
+                        className="bg-cover bg-center h-[600px] flex-1"
+                        style={{ backgroundImage: `url(${project.gallery[4]})` }}
+                    />
+                </div>
+            )}
+            
 
+            {project.gallery[5] && (
                 <div
-                    className="bg-cover bg-center h-[600px] flex-1"
-                    style={{ backgroundImage: `url(${project.gallery[4]})` }}
-                />
-            </div>
-
-            {/* Четвёртый блок - одно фото, такое же как второй */}
-            <div
-                ref={ref4}
-                className={`transition-all duration-1000 ease-out ${visible4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-            >
-                <div
-                    className="bg-cover bg-center h-[600px] flex-1"
-                    style={{ backgroundImage: `url(${project.gallery[5]})` }}
-                />
-            </div>
+                    ref={ref4}
+                    className={`transition-all duration-1000 ease-out ${visible4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                >
+                    <div
+                        className="bg-cover bg-center h-[600px] flex-1"
+                        style={{ backgroundImage: `url(${project.gallery[5]})` }}
+                    />
+                </div>
+            )}
 
 
 

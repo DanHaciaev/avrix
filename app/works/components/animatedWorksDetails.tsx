@@ -48,14 +48,14 @@ export default function AnimatedWorksDetails({ project }: { project: any }) {
             {project.gallery[0] && project.gallery[1] && (
                 <div
                     ref={ref1}
-                    className={`flex gap-5 transition-all duration-1000 ease-out ${visible1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                    className={`flex flex-col lg:flex-row lg:gap-5 transition-all duration-1000 ease-out ${visible1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 >
                     <div
-                        className="bg-cover bg-center h-[600px] max-w-[865px] w-full"
+                        className="bg-cover bg-center h-[550px] lg:h-[500px] 3xl:h-[600px] lg:max-w-3/5 w-full"
                         style={{ backgroundImage: `url(${project.gallery[0]})` }}
                     />
                     <div
-                        className="bg-cover bg-center h-[600px] flex-1"
+                        className="bg-cover bg-center h-[550px] lg:h-[500px] 3xl:h-[600px] flex-1"
                         style={{ backgroundImage: `url(${project.gallery[1]})` }}
                     />
                 </div>
@@ -68,7 +68,7 @@ export default function AnimatedWorksDetails({ project }: { project: any }) {
                     className={`transition-all duration-1000 ease-out ${visible2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 >
                     <div
-                        className="bg-cover bg-center h-[600px]"
+                        className="bg-cover bg-center h-[550px] lg:h-[500px] 3xl:h-[600px]"
                         style={{ backgroundImage: `url(${project.gallery[2]})` }}
                     />
                 </div>
@@ -77,14 +77,14 @@ export default function AnimatedWorksDetails({ project }: { project: any }) {
             {project.gallery[3] && project.gallery[4] && (
                 <div
                     ref={ref3}
-                    className={`flex gap-5 transition-all duration-1000 ease-out ${visible3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                    className={`flex flex-col lg:flex-row lg:gap-5 transition-all duration-1000 ease-out ${visible3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 >
                     <div
-                        className="bg-cover bg-center h-[600px] max-w-[865px] w-full"
+                        className="bg-cover bg-center h-[550px] lg:h-[500px] 3xl:h-[600px] lg:max-w-3/5 w-full"
                         style={{ backgroundImage: `url(${project.gallery[3]})` }}
                     />
                     <div
-                        className="bg-cover bg-center h-[600px] flex-1"
+                        className="bg-cover bg-center h-[550px] lg:h-[500px] 3xl:h-[600px] flex-1"
                         style={{ backgroundImage: `url(${project.gallery[4]})` }}
                     />
                 </div>
@@ -97,7 +97,7 @@ export default function AnimatedWorksDetails({ project }: { project: any }) {
                     className={`transition-all duration-1000 ease-out ${visible4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 >
                     <div
-                        className="bg-cover bg-center h-[600px] flex-1"
+                        className="bg-cover bg-center h-[550px] lg:h-[500px] 3xl:h-[600px] flex-1"
                         style={{ backgroundImage: `url(${project.gallery[5]})` }}
                     />
                 </div>
@@ -106,7 +106,7 @@ export default function AnimatedWorksDetails({ project }: { project: any }) {
 
 
 
-            <div className="flex items-center justify-between max-w-[660px] w-full mx-auto mt-[70px]">
+            <div className="flex flex-col md:flex-row gap-2.5 md:gap-0 items-center justify-between max-w-[660px] w-full mx-auto mt-[70px]">
 
                 {prev ? (
                     <Link href={`/works/${prev.slug}`} className="text-[26px]">

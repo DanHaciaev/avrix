@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Bottom() {
     return (
         <div className="">
-            <section className="relative h-[400px] px-[30px] flex items-center">
+            <section className="relative py-[90px] px-2.5 md:px-[30px] flex items-center">
                 <Image
                     src="/bottom.avif"
                     alt="Background"
@@ -14,7 +14,7 @@ export default function Bottom() {
                 />
                 <div className="relative max-w-[1440px] mx-auto w-full">
                     <div className="flex flex-col gap-[100px]">
-                        <p className="max-w-[432px] text-white text-[36px]">
+                        <p className="lg:max-w-[432px] text-white text-[36px]">
                             Let's Build Somehing Timeless.
                         </p>
 

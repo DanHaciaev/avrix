@@ -8,25 +8,31 @@ export default function AnimatedImagesSofa() {
   const [visible, setVisible] = useState<boolean[]>([false, false]);
 
   useEffect(() => {
+    const isLarge = typeof window !== "undefined" && window.innerWidth >= 1024;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const index = containerRefs.current.indexOf(entry.target as HTMLDivElement);
-          if (entry.isIntersecting && index === 0) {
+
+          // Логика для больших экранов (ожидание первой картинки)
+          if (isLarge && index === 0 && entry.isIntersecting) {
             setVisible((prev) => {
-              // Если первая картинка уже видна, ничего не меняем
               if (prev[0]) return prev;
 
-              // Показываем первую
               const newVisible = [true, prev[1]];
 
-              // Через 0.5s показываем вторую, если она еще не видна
               setTimeout(() => {
                 setVisible((prev2) => [prev2[0], true]);
               }, 500);
 
               return newVisible;
             });
+          }
+
+          // Логика для мобильных → показываем вторую сразу
+          if (!isLarge && index === 1 && entry.isIntersecting) {
+            setVisible((prev) => [prev[0], true]);
           }
         });
       },
@@ -37,6 +43,7 @@ export default function AnimatedImagesSofa() {
 
     return () => observer.disconnect();
   }, []);
+
 
   const setRef = (el: HTMLDivElement | null, index: number) => {
     containerRefs.current[index] = el;
@@ -62,9 +69,10 @@ export default function AnimatedImagesSofa() {
         <div
           key={i}
           ref={(el) => setRef(el, i)}
-          className={`relative w-full h-auto transition-all duration-700 ease-out transform ${
-            visible[i] ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-          }`}
+          className={`relative w-full h-auto transition-all duration-700 ease-out transform
+      ${visible[i] ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}
+      ${i === 0 ? "hidden lg:block" : ""}
+    `}
           style={{ maxWidth: block.maxW }}
         >
           <div className="relative w-full" style={{ height: block.height }}>

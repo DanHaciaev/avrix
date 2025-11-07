@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function BottomStudio() {
     return (
         <div>
-            <section className="relative h-[400px] flex items-center">
+            <section className="relative px-2.5 py-[90px] md:px-[30px] flex items-center">
                 <Image
                     src="/bottom_studio.avif"
                     alt="Background"

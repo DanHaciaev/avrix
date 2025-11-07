@@ -8,25 +8,28 @@ import TableStudio from "../components/tableStudio/tableStudio";
 
 export default function Studio() {
     return (
-        <div>
-            <section className="max-w-[1440px] mx-auto pt-[180px] pb-[90px]">
-                <AnimatedTopStudio />
-            </section>
+        <div className="">
+            <div className="px-2.5 md:px-[30px]">
+                <section className="max-w-[1440px] mx-auto pt-[180px] pb-[90px] ">
+                    <AnimatedTopStudio />
+                </section>
 
-            <section className="max-w-[1440px] mx-auto py-[90px]">
-                <div className="max-w-[720px] mx-auto text-center">
-                    <AnimatedTextSpace text="A space should not demand attention — it should reward presence." />
+                <section className="max-w-[1440px] mx-auto py-[90px]">
+                    <div className="max-w-[720px] mx-auto text-center">
+                        <AnimatedTextSpace text="A space should not demand attention — it should reward presence." />
 
-                </div>
-            </section>
+                    </div>
+                </section>
 
-            <section className="max-w-[1440px] mx-auto py-[90px]">
-                <TeamSection />
-            </section>
+                <section className="max-w-[1440px] mx-auto py-[90px]">
+                    <TeamSection />
+                </section>
 
-            <section className="max-w-[1440px] mx-auto py-[90px]">
-                <TableStudio />
-            </section>
+                <section className="max-w-[1440px] mx-auto py-[90px]">
+                    <TableStudio />
+                </section>
+            </div>
+
 
 
             <BottomStudio />

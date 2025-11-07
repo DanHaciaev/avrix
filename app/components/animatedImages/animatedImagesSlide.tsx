@@ -36,6 +36,7 @@ export default function AnimatedSwiper() {
   const [startX, setStartX] = useState(0);
   const [translateX, setTranslateX] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const [gapSize, setGapSize] = useState(16);
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
   // Создаем массив с клонами: [последний, ...оригиналы, первый]
@@ -63,6 +64,20 @@ export default function AnimatedSwiper() {
     if (autoplayRef.current) clearInterval(autoplayRef.current);
     autoplayRef.current = setInterval(goToNext, 10000);
   };
+
+  // Отслеживание размера экрана для gap
+  useEffect(() => {
+    const updateGapSize = () => {
+      setGapSize(window.innerWidth < 640 ? 8 : 16);
+    };
+
+    updateGapSize();
+    window.addEventListener('resize', updateGapSize);
+
+    return () => {
+      window.removeEventListener('resize', updateGapSize);
+    };
+  }, []);
 
   useEffect(() => {
     resetAutoplay();
@@ -125,7 +140,7 @@ export default function AnimatedSwiper() {
   };
 
   return (
-    <div className="relative max-w-[1440px] mx-auto">
+    <div className="relative w-full max-w-[1440px] mx-auto px-2.5 md:px-[30px]">
       <div
         className="overflow-hidden cursor-grab active:cursor-grabbing"
         onMouseDown={handleMouseDown}
@@ -137,16 +152,16 @@ export default function AnimatedSwiper() {
         onTouchEnd={handleDragEnd}
       >
         <div
-          className={`flex gap-4 ${isTransitioning ? 'transition-transform duration-300 ease-out' : ''}`}
+          className={`flex gap-2 sm:gap-4 ${isTransitioning ? 'transition-transform duration-300 ease-out' : ''}`}
           style={{
-            transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 16}px + ${translateX}px))`,
+            transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * gapSize}px + ${translateX}px))`,
           }}
         >
           {extendedSlides.map((slide, i) => {
             const realIndex = getRealIndex(i);
             return (
               <div key={i} className="min-w-full">
-                <div className="relative w-full h-[500px]">
+                <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px]">
                   <img
                     src={slide.src}
                     alt={slide.title}
@@ -155,13 +170,13 @@ export default function AnimatedSwiper() {
                   />
                 </div>
                 <div
-                  className={`mt-4 max-w-[670px] transition-all duration-700 ease-out transform ${visibleIndex === realIndex
+                  className={`mt-3 sm:mt-4 md:mt-6 max-w-full lg:max-w-[670px] transition-all duration-700 ease-out transform ${visibleIndex === realIndex
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 -translate-y-10"
                     }`}
                 >
-                  <p className="text-[51px] font-semibold mb-1">{slide.title}</p>
-                  <p className="text-lg">{slide.text}</p>
+                  <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[51px] font-semibold mb-1 sm:mb-2">{slide.title}</p>
+                  <p className="text-sm sm:text-base md:text-lg leading-relaxed">{slide.text}</p>
                 </div>
               </div>
             );
@@ -170,15 +185,15 @@ export default function AnimatedSwiper() {
       </div>
 
       {/* Кастомные кнопки переключения */}
-      <div className="absolute -bottom-20 left-0 flex gap-2 z-10">
+      <div className="absolute -bottom-16 left-2.5 md:left-[30px] flex gap-2 z-10">
         <button
           onClick={goToPrev}
-          className="w-10 h-10 flex items-center justify-center bg-black opacity-[0.2] rounded-full cursor-pointer transition-colors hover:opacity-30"
+          className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-black opacity-[0.2] rounded-full cursor-pointer transition-colors hover:opacity-30"
           aria-label="Previous slide"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 text-white"
+            className="w-5 h-5 sm:w-6 sm:h-6 text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -194,12 +209,12 @@ export default function AnimatedSwiper() {
 
         <button
           onClick={goToNext}
-          className="w-10 h-10 flex items-center justify-center bg-black opacity-[0.2] rounded-full cursor-pointer transition-colors hover:opacity-30"
+          className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-black opacity-[0.2] rounded-full cursor-pointer transition-colors hover:opacity-30"
           aria-label="Next slide"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 text-white"
+            className="w-5 h-5 sm:w-6 sm:h-6 text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

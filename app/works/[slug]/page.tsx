@@ -16,12 +16,12 @@ export default async function WorksDetail({ params }: WorksDetailProps) {
   return (
     <div>
       <section
-        className="bg-cover bg-center bg-no-repeat min-h-screen relative flex items-end px-[30px]"
+        className="bg-cover bg-center bg-no-repeat min-h-screen relative flex items-end px-2.5 md:px-[30px]"
         style={{ backgroundImage: `url(${project.mainImage})` }}
       >
         <div className="absolute inset-0 bg-linear-to-t from-black/60 to-black/0 z-0"></div>
 
-        <div className="max-w-[1440px] mx-auto w-full flex items-end justify-between gap-[70px] mb-[90px] z-10">
+        <div className="max-w-[1440px] mx-auto w-full flex flex-col xl:flex-row xl:items-end justify-between gap-[30px] xl:gap-[70px] mb-[90px] z-10">
           <p className="flex-1 text-[51px] text-white">
             {project.title}
           </p>
@@ -33,15 +33,15 @@ export default async function WorksDetail({ params }: WorksDetailProps) {
       </section>
 
 
-      <section className="px-[30px] py-[90px]">
-        <div className="max-w-[1440px] mx-auto flex justify-between gap-5">
-          <div className="flex flex-col justify-between">
-            <div className="flex flex-col gap-5 max-w-[568px]">
+      <section className="px-2.5 md:px-[30px] py-[90px]">
+        <div className="max-w-[1440px] mx-auto flex flex-col 3xl:flex-row justify-between gap-5">
+          <div className="flex flex-col justify-between gap-[90px] 3xl:gap-0">
+            <div className="flex flex-col gap-5 3xl:max-w-[568px]">
               <p className="text-[36px]">{project.details}</p>
-              <p className="text-lg max-w-[530px]">{project.detailsText}</p>
+              <p className="text-lg 3xl:max-w-[530px]">{project.detailsText}</p>
             </div>
 
-            <div className="flex gap-[30px]">
+            <div className="flex flex-col md:flex-row gap-2.5 md:gap-[30px]">
               <p className="text-lg">
                 <strong className="font-normal!">Location</strong> {project.location}
               </p>
@@ -54,13 +54,13 @@ export default async function WorksDetail({ params }: WorksDetailProps) {
             </div>
           </div>
 
-          <div className="max-w-[710px] w-full">
+          <div className="3xl:max-w-[710px] w-full">
             <AnimatedSwiperWorks slides={project.slider} />
           </div>
         </div>
       </section>
 
-      <section className="px-[30px] py-[90px]">
+      <section className="px-0 md:px-[30px] py-[90px]">
         <AnimatedWorksDetails project={project} />
       </section>
     </div>

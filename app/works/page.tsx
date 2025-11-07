@@ -2,7 +2,7 @@ import AnimatedImagesWorks from "./components/animatedImagesWorks";
 
 export default function Works() {
   return (
-    <div className="bg-black px-[30px]">
+    <div className="bg-black px-2.5 md:px-[30px]">
       <section className="flex flex-col gap-[30px] pt-[180px] pb-[90px] max-w-[1440px] mx-auto">
         <p className="max-w-[864px] text-white text-[73px]">
           Work that balances form, function, and feeling.

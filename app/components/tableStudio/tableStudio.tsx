@@ -38,7 +38,7 @@ export default function TableStudio() {
                 <div className="grid grid-cols-1 text-lg text-[#0d0d0d]">
 
                     {/* HEADER */}
-                    <div className="grid grid-cols-4 gap-4 py-5 border-b border-black text-[#333] opacity-[.4] font-medium uppercase">
+                    <div className="grid grid-cols-3 md:grid-cols-4 gap-4 py-5 border-b border-black text-[#333] opacity-[.4] font-medium uppercase">
                         <p>Year</p>
                         <p>Project</p>
                         <p>Award</p>
@@ -53,7 +53,7 @@ export default function TableStudio() {
                     ].map((row, i) => (
                         <div
                             key={i}
-                            className="grid grid-cols-4 gap-4 py-5 border-b border-black"
+                            className="grid grid-cols-3 md:grid-cols-4 items-center gap-4 py-5 border-b border-black"
                         >
                             <p>{row[0]}</p>
                             <p>{row[1]}</p>

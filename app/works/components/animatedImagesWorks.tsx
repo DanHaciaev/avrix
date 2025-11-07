@@ -50,7 +50,7 @@ export default function AnimatedImagesWorks() {
                 <div
                     key={index}
                     ref={refs[index]}
-                    className={`flex gap-5 transition-all duration-1000 ease-out
+                    className={`flex gap-5 transition-all duration-1000 ease-out flex-col 3xl:flex-row
                         ${visibility[index] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
                     `}
                 >

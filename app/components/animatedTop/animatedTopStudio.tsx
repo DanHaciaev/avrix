@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 export default function animatedTopStudio() {
     return (
         <div>
-            <div className="flex gap-[90px]">
+            <div className="flex flex-col 3xl:flex-row gap-[90px]">
                 {/* TEXT BLOCK */}
                 <motion.div
                     initial={{ opacity: 0, y: 60 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="max-w-[414px] flex flex-col gap-[30px]"
+                    className="3xl:max-w-[414px] flex flex-col gap-[30px]"
                 >
                     <p className="text-[70px]">Our Ethos</p>
 
@@ -36,7 +36,7 @@ export default function animatedTopStudio() {
                     initial={{ opacity: 0, y: 60 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                    className="relative max-w-[940px] w-full h-[651px] aspect-4/3 overflow-hidden"
+                    className="relative 3xl:max-w-[940px] w-full h-[651px] aspect-4/3 overflow-hidden"
                 >
                     <Image
                         src="/studio.avif"

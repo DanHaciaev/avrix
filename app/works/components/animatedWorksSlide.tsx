@@ -102,7 +102,7 @@ export default function AnimatedSwiperWorks({ slides }: { slides: string[] }) {
     };
 
     return (
-        <div className="relative max-w-[710px] w-full mx-auto">
+        <div className="relative 3xl:max-w-[710px] w-full mx-auto">
             <p className="absolute z-100 text-white right-2 top-3 text-[26px]">
                 Project Highlights
             </p>
@@ -140,7 +140,7 @@ export default function AnimatedSwiperWorks({ slides }: { slides: string[] }) {
             </div>
 
             {/* Кастомные кнопки переключения */}
-            <div className="absolute -bottom-[60px] right-0 flex gap-2 z-10">
+            <div className="absolute left-1/2 -translate-x-1/2 -bottom-[60px] md:left-auto md:translate-x-0 md:right-0 flex gap-2 z-10">
                 <button
                     onClick={goToPrev}
                     className="w-10 h-10 flex items-center justify-center bg-black opacity-[0.2] rounded-full cursor-pointer transition-colors hover:opacity-30"

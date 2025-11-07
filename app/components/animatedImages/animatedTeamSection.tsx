@@ -42,16 +42,16 @@ export default function TeamSection() {
                 Ideas Begin With Us
             </p>
 
-            <div className="flex gap-2.5">
+            <div className="flex flex-col gap-5 md:flex-row md:grid md:grid-cols-2 md:gap-x-5 md:gap-y-10 3xl:flex! 3xl:flex-row 3xl:gap-2.5">
 
                 {team.map((person, i) => (
                     <div
                         key={i}
-                        className={`max-w-[350px] w-full flex flex-col gap-2.5 transition-all duration-700 transform
-            ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                        className={`flex flex-col gap-2.5 transition-all md:max-w-[673px] 3xl:max-w-[350px] w-full 3xl:min-h-[350px] duration-700 transform
+    ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                         style={{ transitionDelay: `${(i + 1) * 0.2}s` }}
                     >
-                        <div className="relative w-[350px] h-[350px]">
+                        <div className="relative w-full aspect-square md:max-w-[700px] 3xl:max-w-[350px]">
                             <Image
                                 src={person.src}
                                 alt={person.name}
@@ -66,6 +66,7 @@ export default function TeamSection() {
                             <p className="text-lg text-[#333333] italic opacity-[.4]">{person.role}</p>
                         </div>
                     </div>
+
                 ))}
 
             </div>

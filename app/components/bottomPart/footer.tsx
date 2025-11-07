@@ -1,10 +1,10 @@
 export default function Footer() {
     return (
         <div>
-            <footer className="py-[90px] px-[30px] bg-black">
-                <div className="max-w-[1440px] mx-auto h-[200px] flex items-center justify-between">
+            <footer className="py-[90px] px-2.5 md:px-[30px] bg-black">
+                <div className="max-w-[1440px] w-full mx-auto lg:h-[200px] flex flex-col-reverse gap-[50px] lg:gap-0 lg:flex-row lg:items-center justify-between">
                     {/* Left part of footer */}
-                    <div className="flex flex-col justify-between h-full">
+                    <div className="flex flex-col justify-between h-[100px] lg:h-full">
                         <div className="flex flex-col gap-2.5">
                             <p className="text-white text-[26px]">Follow Us</p>
                             <ul className="flex gap-2.5 text-[15px] text-white opacity-[0.5]">
@@ -21,8 +21,8 @@ export default function Footer() {
                     </div>
 
                     {/* Right part of footer */}
-                    <div className="flex gap-[90px] justify-between h-full">
-                        <div className="flex flex-col justify-between max-w-[165px]">
+                    <div className="flex lg:gap-[90px] justify-between ">
+                        <div className="flex flex-col justify-between max-w-[165px] h-[150px] lg:h-full">
                             <div className="flex flex-col gap-2.5">
                                 <p className="text-white text-[26px]">
                                     Headquaters

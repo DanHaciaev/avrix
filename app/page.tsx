@@ -12,10 +12,10 @@ export default function Home() {
 
   return (
     <div className="">
-      <section className="bg-[url(/main.avif)] bg-cover bg-center bg-no-repeat min-h-screen flex items-center px-[30px]" data-bg="dark">
+      <section className="bg-[url(/main.avif)] bg-cover bg-center bg-no-repeat min-h-screen flex items-center px-2.5 md:px-[30px]" data-bg="dark">
         <div className="max-w-[1440px] mx-auto w-full">
-          <ul className="uppercase text-[18px] text-white flex justify-between">
-            <li>Featured project</li>
+          <ul className="uppercase text-lg text-white flex justify-between">
+            <li className="hidden lg:flex">Featured project</li>
             <li>Circle 27</li>
             <li>2025</li>
             <li>View project</li>
@@ -24,7 +24,7 @@ export default function Home() {
       </section>
 
 
-      <section className="px-[30px] py-[90px]">
+      <section className="px-2.5 md:px-[30px] py-[90px]">
         <div className="max-w-[1440px] mx-auto">
           <div className="max-w-[682px] flex flex-col gap-[70px]">
             <AnimatedText text="Avrix is a design-forward development studio focused on creating built environments architectural experiences that stand the test of time." highlightWords={6} />
@@ -38,7 +38,7 @@ export default function Home() {
 
       </section>
 
-      <section className="px-[30px] py-[90px]">
+      <section className="px-2.5 md:px-[30px] py-[90px]">
         <div className="max-w-[1440px] mx-auto">
           <div className="flex flex-col gap-[50px]">
             <p className="text-[36px] text-[#0d0d0d] ">
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-[30px] py-[90px]">
+      <section className="px-2.5 md:px-[30px] py-[90px]">
         <div className="max-w-[1440px] mx-auto">
           <div className="max-w-[720px] mx-auto text-center">
             <AnimatedTextSpace text="A space should not demand attention — it should reward presence." />
@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-[30px] py-[90px]">
+      <section className="px-2.5 md:px-[30px] py-[90px]">
         <div className="max-w-[1440px] mx-auto">
           <div className="flex flex-col gap-[50px]">
 

@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-4xl: 1490px;
+  --breakpoint-3xl: 1440px;
+  --breakpoint-xl: 840px
+}
+
 * {
   font-family: var(--font-host-grotesk);
   scrollbar-width: none;
@@ -7,4 +13,5 @@
   line-height: 107%;
   font-weight: 300;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }

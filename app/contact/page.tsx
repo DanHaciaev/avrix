@@ -43,13 +43,13 @@ export default function Contact() {
         <div>
             <div className="bg-[url(/contact.avif)] bg-cover bg-top bg-no-repeat min-h-[70vh] flex items-center"></div>
 
-            <section>
-                <div className="max-w-[1440px] mx-auto py-[90px] flex gap-5">
+            <section className="py-[90px] px-2.5 md:px-[30px]">
+                <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row gap-[90px] md:gap-0 ">
 
                     {/* LEFT SIDE */}
                     <div className="flex flex-col items-start flex-1">
 
-                        <div className="flex flex-col max-w-[568px] gap-[70px]">
+                        <div className="flex flex-col md:max-w-[568px] gap-[70px]">
 
                             {/* BLOCK 1 */}
                             <div
@@ -68,7 +68,7 @@ export default function Contact() {
                             <div
                                 data-index={2}
                                 ref={(el) => registerRef(el, 2)}
-                                className={`text-[18px] text-[#0D0D0D] leading-relaxed ${animate(2)}`}
+                                className={`text-lg text-[#0D0D0D] leading-relaxed ${animate(2)}`}
                             >
                                 <a href="tel:+44123456789" className="block">
                                     +44 (0)1 2345 6789
@@ -82,7 +82,7 @@ export default function Contact() {
                             <p
                                 data-index={3}
                                 ref={(el) => registerRef(el, 3)}
-                                className={`text-[18px] text-[#0D0D0D] ${animate(3)}`}
+                                className={`text-lg text-[#0D0D0D] ${animate(3)}`}
                             >
                                 42 Kingstreet Hollow <br />
                                 London, LDN 1AB <br />
@@ -101,7 +101,7 @@ export default function Contact() {
                             ref={(el) => registerRef(el, 4)}
                             className={`flex flex-col gap-2.5 ${animate(4)}`}
                         >
-                            <label htmlFor="name" className="text-[18px] font-medium text-[#0D0D0D]">
+                            <label htmlFor="name" className="text-lg font-medium text-[#0D0D0D]">
                                 Name
                             </label>
                             <input
@@ -118,7 +118,7 @@ export default function Contact() {
                             ref={(el) => registerRef(el, 5)}
                             className={`flex flex-col gap-2.5 ${animate(5)}`}
                         >
-                            <label htmlFor="company" className="text-[18px] font-medium text-[#0D0D0D]">
+                            <label htmlFor="company" className="text-lg font-medium text-[#0D0D0D]">
                                 Company Name
                             </label>
                             <input
@@ -135,7 +135,7 @@ export default function Contact() {
                             ref={(el) => registerRef(el, 6)}
                             className={`flex flex-col gap-2.5 ${animate(6)}`}
                         >
-                            <label htmlFor="email" className="text-[18px] font-medium text-[#0D0D0D]">
+                            <label htmlFor="email" className="text-lg font-medium text-[#0D0D0D]">
                                 Email
                             </label>
                             <input
@@ -152,7 +152,7 @@ export default function Contact() {
                             ref={(el) => registerRef(el, 7)}
                             className={`flex flex-col gap-2.5 ${animate(7)}`}
                         >
-                            <label htmlFor="message" className="text-[18px] font-medium text-[#0D0D0D]">
+                            <label htmlFor="message" className="text-lg font-medium text-[#0D0D0D]">
                                 Message
                             </label>
                             <textarea

@@ -47,23 +47,23 @@ export default function Gallery() {
     <section className="flex flex-col items-center flex-none gap-2.5 h-min overflow-hidden pt-[180px] md:px-[30px] pb-[90px] relative w-full">
       <div className="flex flex-col items-center flex-none gap-[70px] h-min max-w-[1440px] overflow-visible p-0 relative w-full">
 
-        <div className="grid grid-cols-1 gap-y-4 max-w-[770px] w-full md:grid-cols-2 md:justify-center md:auto-rows-fr md:gap-[180px_90px] md:flex-none md:h-min md:p-0 md:relative md:w-full">
+        <div className="grid grid-cols-1 gap-y-4 max-w-[770px] w-full md:grid-cols-2 md:justify-center md:max-w-[1440px] md:auto-rows-fr md:gap-[180px_90px] md:flex-none md:h-min md:p-0 md:relative md:w-full">
           {gallery.gallery.map((src, index) => {
             const isBottomPadding = index % 2 === 0; // чётные — pb, нечётные — pt
 
             return (
               <AnimatedItem key={index}>
-                <div className="flex flex-row items-center justify-start gap-2.5 flex-1 h-[556px] md:max-w-[640px] md:h-[698px] 3xl:h-screen p-0 relative w-full">
+                <div className="flex flex-row items-center justify-start gap-2.5 flex-1 h-[556px] md:max-w-[640px] md:h-[698px] md:max-w-unset! 3xl:h-screen! p-0 relative w-full">
                   <div
-                    className={`flex flex-row items-center flex-1 h-full gap-2.5 overflow-hidden relative max-w-[770px] w-full ${isBottomPadding ? "md:pb-[180px]" : "md:pt-[180px]"
+                    className={`flex flex-row items-center flex-1 h-full gap-2.5 overflow-hidden relative max-w-[770px] md:max-w-unset! w-full ${isBottomPadding ? "md:pb-[180px]" : "md:pt-[180px]"
                       }`}
                   >
-                    <div className="flex-1 h-full overflow-hidden relative max-w-[770px] w-full">
-                      <div className="absolute inset-0 rounded-inherit max-w-[770px] w-full">
+                    <div className="flex-1 h-full overflow-hidden relative max-w-[770px] md:max-w-unset w-full">
+                      <div className="absolute inset-0 rounded-inherit max-w-[770px] md:max-w-unset w-full">
                         <img
                           src={src}
                           alt=""
-                          className="block max-w-[770px] w-full h-full rounded-inherit object-center object-cover"
+                          className="block max-w-[770px] md:max-w-unset! w-full h-full rounded-inherit object-center object-cover"
                         />
                       </div>
                     </div>
